@@ -36,4 +36,11 @@ function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
 
-showTask();    
+showTask();     //to show the data even after refreshing the page
+
+// Add event listener to the input box to detect Enter key press
+inputBox.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
